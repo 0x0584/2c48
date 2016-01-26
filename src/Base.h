@@ -13,9 +13,9 @@
   #define printf printf
 #endif
 // D for Dimension
-#define D 4 
-#define GAMESIZE D*D
+#define Dim 4 
+#define GAMESIZE Dim*Dim
 
-static int Tiles[GAMESIZE];
+static int Ts[GAMESIZE];
 
 #endif
