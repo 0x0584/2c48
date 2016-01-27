@@ -3,8 +3,8 @@
 
 int main()
 {
-	initscr();
-	noecho();
-	
-	endwin();
+	tcgetattr(STDIN_FILENO, &oldt);
+    	newt = oldt;
+    	newt.c_lflag &= ~(ICANON | ECHO);
+    	tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 }
